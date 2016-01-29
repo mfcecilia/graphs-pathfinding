@@ -1,0 +1,70 @@
+graphs and path-finding
+
+find slides in google group
+find vids on youtube
+
+this is the advanced class
+
+graphs
+algorithms
+
+types of graphs
+1. directed
+2. weighted
+
+algorithms
+- traversals/searches/tree-growing
+	-bfs, dfs
+	-dijkstra's
+
+dijkstra's and bfs
+
+-breadth-first search (bfs)
+starting at a single node, search all neighbors
+search nodes a distace 2 away
+repeat until goal is found
+process involves a queue
+
+implementation
+
+storing a graph
+-list of edges
+	edge[]
+	arrayList<edge>
+-adjacency list
+	list<node>[]
+	List<list<node>>
+
+adjacency matrix
+
+adjecency list is preferably in almost every case unless your algorithm depends on a different data structure
+easiest way is like so:
+arrayList<arrayList<node>> graph = new arrayList<arrayList<node>>
+they easily let you find nodes that are connected to a specific node
+neighbors are stored directly 
+for (node adj : graph...
+equivalent ways to represent adjacency lists
+	-arrays, hashmaps of lists, using sets instead of list
+
+basic bfs structure:
+queue of nodes to process
+set of visited nodes
+each turn, process one node
+	-add neighbors which haven't been visited to the queue
+	
+queue<node> queue = new arrayDeque<node>();
+set<node> visited = new Hashset<Node();
+queue.offer(start);
+
+usage in competitive programming:
+-what's the runtime of a typical bfs?
+-processes each node once for sure
+-how about edges?
+O(v+E)
+V is number of nodes, E is number of edges
+sometimes E can be O(v^2), read problem carefully
+when do you use it?
+looking for shortest paths in an unweighted graph
+general graph traversal (dfs also works)
+processing levels in increasing distance
+
